@@ -1,0 +1,83 @@
+
+Atom常用快捷键
+
+
+
+-------------- 编辑操作 ------------------
+选中一行                Ctrl + L
+选定光标处至文档首行      Ctrl + Shift + Home
+查找 / 替换             Ctrl + F
+高级替换                Ctrl + Shift + F
+匹配选定下一个          Ctrl + D
+匹配选定所有            Alt + F3
+复制光标所在行          Ctrl + Shift + D
+删除一行                Ctrl + Shift + K
+打开Chrome调试器         Ctrl + Shift + I
+向右缩进                Ctrl + ]
+向左缩进                Ctrl + [
+向上移动一行              Ctrl + Up
+向下移动一行              Ctrl + Down
+光标下增加一行             Ctrl + Enter (自己改成了 Shift + Enter)
+光标上增加一行             Ctrl + Shift + Enter
+
+
+
+
+
+
+
+
+
+
+-------------- 文件操作 ------------------
+新建文件                Ctrl + N
+关闭文件                Ctrl + W
+另存为                  Ctrl + Shift + S
+重新打开上次关闭的文件   Ctrl + Shift + T (类似于 Chrome)
+复制文件路径            Ctrl + Shift + C
+设置文件编码            Ctrl + Shift + U
+重新载入当前文件        Ctrl + Alt + R
+查询文件, 选定打开      Ctrl + P  (搜索并打开文件)
+光标所在行上移         Ctrl + Up        (user: Ctrl + Shift + Up)
+光标所在行下移         Ctrl + Down      (user: Ctrl + Shift + Down)
+
+
+
+
+-------------- 文件夹操作 ------------------
+打开文件夹              Ctrl + Shift + O
+加载项目目录             Ctrl + Alt + O
+
+
+-------------- 定位操作 ------------------
+跳转到某一行              Ctrl + G
+切换标签页               Ctrl + Tab
+文件跳转面板              Ctrl + T
+进入变量,方法             Ctrl + R (相当于 idea   Ctrl + B)
+
+
+
+-------------- 显示样式 ------------------
+语法选择                Ctrl + Shift + L
+显示左侧目录            Ctrl + \
+
+
+
+-------------- 窗口操作 ------------------
+打开新窗口               Ctrl + Shift + N
+
+
+
+-------------- 编辑器操作 ------------------
+关闭编辑器               Ctrl + Shift + W
+
+
+-------------- 包管理操作 ------------------
+全局搜索面板              Ctrl + Shift + P
+
+
+
+
+
+
+--
