@@ -92,27 +92,6 @@ $ cat /c/Users/w1563/.gitconfig
 
 
 
-
-
-
-
-github access_token
-    08334d0f66ee7becf982d16eae0a39bcdddcf483
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---------------------------------------------------
 git add <file>  将文件提交到暂存区
 git rm --cached <file>  将文件从暂存区删除
