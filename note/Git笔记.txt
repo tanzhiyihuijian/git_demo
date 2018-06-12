@@ -12,6 +12,87 @@ Git签名
 
 签名有全局范围和项目范围之分, 每个项目可以拥有独立的签名
 
+项目级别/仓库级别: 仅在当前本地库范围有效 (配置保存在当前项目下 .git/config 文件中)
+=> git config user.name xxx
+   git config user.email xxx@yyy.com
+
+系统用户: 登录当前系统的用户范围  (配置保存在)
+=> git config --global user.name xxx
+   git config --global user.email xxx@yyy.com
+
+查询签名
+$ git config -l
+core.symlinks=false
+core.autocrlf=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=J:/dev/tools/git/Git/mingw32/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+user.name=bobo
+user.email=w15635606382@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+core.hidedotfiles=dotGitOnly
+remote.origin.url=https://github.com/tanzhiyihuijian/git_demo.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin_git_demo.url=git@github.com:tanzhiyihuijian/git_demo.git
+remote.origin_git_demo.fetch=+refs/heads/*:refs/remotes/origin_git_demo/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+
+签名信息保存在何处 ?
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+        hideDotFiles = dotGitOnly
+[remote "origin"]
+        url = https://github.com/tanzhiyihuijian/git_demo.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "origin_git_demo"]
+        url = git@github.com:tanzhiyihuijian/git_demo.git
+        fetch = +refs/heads/*:refs/remotes/origin_git_demo/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[user]
+        name = dom4j
+        email = netty_dom4j@163.com
+
+
+全局范围内的Git签名, 保存在用户家目录下的 .gitconfig文件中
+$ cat /c/Users/w1563/.gitconfig
+[user]
+        name = bobo
+        email = w15635606382@gmail.com
+
+
+
+优先级: 就近原则, 项目级别优先级高 (如果只有系统用户级别的签名, 就以系统用户级别为准)
+
+配置签名方式
+
+
+    git config
+
+
+
+
+
 
 
 
@@ -20,8 +101,7 @@ github access_token
 
 
 
-配置方式
-    git config
+
 
 
 
