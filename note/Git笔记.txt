@@ -1,7 +1,7 @@
 Git笔记.txt
 
 
-
+---------------------------------------------------
 git add <file>  将文件提交到暂存区
 git rm --cached <file>  将文件从暂存区删除
 git status  查看文件状态
@@ -17,7 +17,7 @@ git log --oneline  简洁显示(部分哈希值 + 提交说明)   只显示当�
 git reflog 简洁显示(部分哈希值 + 指针移动数目 + 提交说明)
 
 
-
+------------------------------------------
 版本前进和后退
 1. 基于索引: 前进后退都可以
 git reset --hard <hash>
@@ -35,6 +35,7 @@ reset的三个参数
   --mixed: 在本地库移动HEAD指针, 重置暂存区和工作区
 
 
+-----------------------------------
 已删除文件找回
 
 1. 已提交至暂存区, 还未提交到本地库
@@ -45,22 +46,12 @@ git checkout -- <file>
 版本回退
 
 
-
+--------------------------------
 比较文件差异
 
 git diff <file>   工作区文件和暂存区比较
 git diff HEAD <file>  工作区文件和本地库比较
 git diff HEAD^^ <file>  工作区文件和本地库任意版本比较
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -70,6 +61,33 @@ git diff HEAD^^ <file>  工作区文件和本地库任意版本比较
 git branch  查看分支
 git branch <branch_name>    创建新分支
 git checkout <branch_name>  切换分支
+
+
+合并分支
+1. 切换到被合并的分支上面
+git checkout <branch_name>
+
+2. 合并分支
+git merge <branch_name>
+
+3. 冲突解决
+
+
+
+
+
+推送至远程库
+1. github创建远程仓库
+https://github.com/tanzhiyihuijian/git_demo.git
+
+2. 在本地为远程库起别名
+git remote add origin https://github.com/tanzhiyihuijian/git_demo.git
+git remote -v  查看远程库
+
+3. 推送至远程库
+git push origin master
+
+
 
 
 
