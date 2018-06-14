@@ -189,7 +189,133 @@ git push origin master
 ----------------------------------------------------------
 
 
+git clone
+语法: git clone <版本库网址>
+作用: 从远程仓库克隆一个版本库, 该命令会在本地主机生成一个目录, 与远程主机的版本库同名,
+  如果要指定不同的目录名, 可以将目录名作为 git clone的第二个参数
+  git clone <版本库网址> <本地目录名>
 
+git clone支持多种协议, 除了 http(s)外, 还支持 ssh, git, 本地协议等
+
+
+------
+git remote
+语法: git remote [option]
+作用: 为了便于管理, Git要求每个远程主机都必须指定一个主机名, git remote就用于管理主机名
+示例:
+
+  git remote
+    列出所有远程主机
+
+    $ git remote
+    origin
+
+
+  git remote -v
+    查看远程主机的网址 (克隆版本库的时候, 远程主机被 git自动命名为 origin)
+
+    $ git remote -v
+    origin  https://github.com/tanzhiyihuijian/git_demo.git (fetch)
+    origin  https://github.com/tanzhiyihuijian/git_demo.git (push)
+
+
+  git remote show <主机名>
+    查看主机的信息
+
+    $ git remote show origin
+    * remote origin
+      Fetch URL: https://github.com/tanzhiyihuijian/git_demo.git
+      Push  URL: https://github.com/tanzhiyihuijian/git_demo.git
+      HEAD branch: master
+      Remote branches:
+        bobo   new (next fetch will store in remotes/origin)
+        master tracked
+      Local branch configured for 'git pull':
+        master merges with remote master
+      Local ref configured for 'git push':
+        master pushes to master (up to date)
+
+
+  git remote add <主机名> <网址>
+    用于添加远程主机
+
+  git remote rm <主机名>
+    删除远程主机
+
+  git remote rname <原主机名> <新主机名>
+    修改远程库别名
+
+----
+
+git fetch
+  一旦远程主机版本库有了更新(Git术语叫做 commit), 需要将这些更新取回本地,
+  这时就要用到 git fetch命令
+
+  git fetch命令通常用来查看其他人的进程, 因为它取回的代码对你本地的开发代码没有影响
+
+
+git fetch
+  将某个远程主机的更新全部取回本地
+  默认情况下, git fetch取回所有分支的更新, 如果只想取回特定的分支, 可以指定分支名
+  git fetch <远程主机名> <分支名>
+  所取回的更新, 在本地主机上要用 远程主机名/分支名访问, 如: origin/master
+
+git branch命令的 -r选项, 可以用来查看远程分支,  -a查看所有分支
+  $ git branch -r
+  origin/master
+
+  $ git branch -a
+  a_branch
+  atom_branch
+  b_branch
+* master
+  remotes/origin/master
+
+
+  取回远程主机的更新后, 可以在他的基础之上, 使用 git checkout命令创建一个新的分支
+  git checkout -b new_branch origin/master
+
+
+  也可以使用 git merge命令或者 git rebase 命令, 在本地分支上合并远程分支
+  $ git merge origin/master
+
+--------------------------------------
+
+git pull
+作用: 取回远程主机某个分支的更新, 再与本地分支进行合并
+语法: git pull <远程主机名> <远程分支名> : <本地分支名>
+
+  如取回origin主机的 next分支, 与本地的 master分支合并, 需要写成下面这样
+    git pull origin next:master
+  如果远程分支与当前分支合并, 则冒号后面的部分可以省略
+    git pull origin (该命令等同于: 先做 git fetch, 再做 git merge)
+
+    git fetch origin
+    git merge origin/master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git
 
 
 
